@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>₿ BITCOIN STORE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #fff; color: #111; }
+    header { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background-image: url('https://i.pinimg.com/736x/28/bf/68/28bf682e7e83eebab202b936411b8b05.jpg'); background-size: cover; background-position: center; position: relative; }
+    header::after{ content:''; position:absolute; inset:0; background:rgba(255,255,255,0.6); }
+    header *{position:relative; z-index:1;}
+    header h1 { font-size: 48px; margin-bottom: 20px; }
+    header p { font-size: 18px; margin-bottom: 30px; }
+    .btn { padding: 14px 36px; border: 1px solid #111; background: none; font-size: 16px; cursor: pointer; }
+    section { padding: 80px 10%; }
+    h2 { font-size: 36px; margin-bottom: 40px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
+    .item { border: 1px solid #ddd; padding: 20px; }
+    .product-img { width: 100%; height: 300px; object-fit: cover; margin-bottom: 15px; }
+    footer { text-align: center; padding: 30px; border-top: 1px solid #ddd; font-size: 14px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>₿ BITCOIN STORE</h1>
+  <p>Big Boss store.</p>
+  <button class="btn" onclick="document.getElementById('collection').scrollIntoView({behavior:'smooth'})">Смотреть коллекцию</button>
+</header>
+
+<section id="collection">
+  <h2>Коллекция</h2>
+  <div class="grid">
+
+    <div class="item">
+      <img src="images/flared1.jpg" alt="Flared Jeans 1" class="product-img">
+      <h3>Flared Jeans grey</h3>
+      <button class="btn" onclick="orderTelegram('Flared Jeans grey')">Заказать</button>
+    </div>
+
+    <div class="item">
+      <img src="images/flared2.jpg" alt="Flared Jeans 2" class="product-img">
+      <h3>Flared Jeans black</h3>
+      <button class="btn" onclick="orderTelegram('Flared Jeans black')">Заказать</button>
+    </div>
+
+    <div class="item">
+      <img src="images/flared3.jpg" alt="Flared Jeans 3" class="product-img">
+      <h3>Flared Jeans blue</h3>
+      <button class="btn" onclick="orderTelegram('Flared Jeans blue')">Заказать</button>
+    </div>
+
+    <div class="item">
+      <img src="images/flared4.jpg" alt="Flared Jeans 4" class="product-img">
+      <h3>Flared Jeans dollar</h3>
+      <button class="btn" onclick="orderTelegram('Flared Jeans dollar')">Заказать</button>
+    </div>
+
+    <div class="item">
+      <img src="images/baggy.jpg" alt="Baggy Jeans" class="product-img">
+      <h3>Baggy Jeans</h3>
+      <button class="btn" onclick="orderTelegram('Baggy Jeans')">Заказать</button>
+    </div>
+
+    <div class="item">
+      <img src="images/bracelet.jpg" alt="Rap Bracelet" class="product-img">
+      <h3>Rap Bracelet</h3>
+      <button class="btn" onclick="orderTelegram('Rap Bracelet')">Заказать</button>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2025 ₿ BITCOIN STORE
+</footer>
+
+<script>
+  function orderTelegram(productName){
+    const telegramLink = `https://t.me/niggaofglobaltreding?text=${encodeURIComponent('Хочу заказать: ' + productName)}`;
+    window.open(telegramLink, '_blank');
+  }
+</script>
+
+</body>
+</html>
